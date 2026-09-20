@@ -135,7 +135,8 @@ ax1.yaxis.set_major_formatter(mtick.PercentFormatter())
 ax2 = ax1.twinx()
 color2 = '#d62728'
 line = ax2.plot(strategies, irrs, color=color2, marker='o', markersize=8, linewidth=2.5, label='Equity IRR (%)')
-ax2.set_ylabel('Equity IRR (%)', color2, fontsize=12, fontweight='bold')
+# اصلاح خطای پاس دادن color2 به صورت positional argument
+ax2.set_ylabel('Equity IRR (%)', color=color2, fontsize=12, fontweight='bold')
 ax2.tick_params(axis='y', labelcolor=color2)
 ax2.yaxis.set_major_formatter(mtick.PercentFormatter())
 
